@@ -1,0 +1,5 @@
+(define (butlastn lst n)
+  (let loop ((lst (reverse lst))(n n))
+	(if (or (zero? n) (null? lst))
+	  (reverse lst)
+	  (loop (cdr lst) (- n 1)))))

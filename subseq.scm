@@ -1,0 +1,10 @@
+(define (subseq lst n m)
+  (define (drop lst n)
+	(let loop ((lst lst)(n n))
+	  (if (or (zero? n) (null? lst))
+		lst
+		(loop (cdr lst) (- n 1)))))
+  (let loop ((lst lst)(m m)(result '()))
+	(if (or (zero? m) (null? lst))
+	  (drop (reverse result) n)
+	  (loop (cdr lst) (- m 1) (cons (car lst) result)))))

@@ -1,0 +1,5 @@
+(define (group lst n)
+  (let loop ((lst lst)(result '()))
+	(if (null? lst)
+	  (reverse result)
+	  (loop (drop lst n) (cons (take lst n) result)))))

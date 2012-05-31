@@ -1,0 +1,5 @@
+(define (butlast lst)
+  (let loop ((lst lst)(result '()))
+	(if (null? (cdr lst))
+	  (reverse result)
+	  (loop (cdr lst) (cons (car lst) result)))))

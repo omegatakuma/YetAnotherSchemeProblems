@@ -1,0 +1,5 @@
+(define (take lst n)
+  (let loop ((lst lst)(n n)(result '()))
+	(if (or (zero? n) (null? lst))
+	  (reverse result)
+	  (loop (cdr lst) (- n 1) (cons (car lst) result)))))
