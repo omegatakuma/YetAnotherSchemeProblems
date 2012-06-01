@@ -1,0 +1,5 @@
+(define (iota n m)
+  (let loop ((n n)(result (cons n '())))
+	(if (eqv? n m)
+	  (reverse result)
+	  (loop (+ n 1) (cons (+ n 1) result)))))
